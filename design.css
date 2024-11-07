@@ -1,0 +1,179 @@
+/* Colors from the palette */
+:root {
+    --light-blue: #00a6fb;
+    --medium-blue: #0582ca;
+    --dark-blue: #006494;
+    --darker-blue: #003554;
+    --darkest-blue: #051923;
+}
+
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: var(--darkest-blue);
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar styling */
+.sidebar {
+    background-color: var(--dark-blue);
+    color: #fff;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+.logo h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: var(--light-blue);
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--medium-blue);
+    border-radius: 5px;
+}
+
+.nav a i {
+    margin-right: 10px;
+}
+
+.nav a:hover {
+    background-color: var(--light-blue);
+}
+
+.download-btn {
+    margin-top: auto;
+    padding: 10px 20px;
+    background-color: var(--darker-blue);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.download-btn i {
+    margin-right: 5px;
+}
+
+.download-btn:hover {
+    background-color: var(--medium-blue);
+}
+
+/* Main chat interface styling */
+.chat-interface {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.chat-header h1 {
+    font-size: 2em;
+    color: var(--darkest-blue);
+}
+
+.chat-header p {
+    color: var(--medium-blue);
+    margin-top: 5px;
+}
+
+.chat-box {
+    margin-top: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--light-blue);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.bot-message {
+    background-color: var(--medium-blue);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    width: fit-content;
+    max-width: 80%;
+}
+
+.user-input {
+    display: flex;
+    align-items: center;
+}
+
+.user-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid var(--medium-blue);
+    border-radius: 5px;
+    color: var(--darkest-blue);
+}
+
+.user-input button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: var(--darker-blue);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-input button:hover {
+    background-color: var(--dark-blue);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    
+    .chat-header h1 {
+        font-size: 1.5em;
+    }
+}
